@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input id="inn" type="text" oninput="ishla()">
+
+    <p id="hh"></p>
+
+
+    <script>
+        function ishla() {
+
+            let input = document.getElementById('inn')
+
+            let len = input.value.length
+            if (len > 8) {
+                input.style.border= "5px solid green"
+                document.getElementById('hh').innerHtml="kuchli parol"
+                document.getElementById("hh").style.color="green"
+            }
+                
+             else if (len < 7 && 4 > len) {
+                input.style.border = "5px solid red"
+                document.getElementById("hh").innerHTML ="kuchsiz parol"
+                document.getElementById("hh").style.color ="red"
+             }
+            
+             else {
+                input.style.border = "5px solid yellow"
+                document.getElementById("hh").innerHTML = "ortancha parol"
+                document.getElementById("hh").style.color="yellow"
+                
+            }
+        }
+    </script>
+
+</html>
