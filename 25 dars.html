@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text">
+    <button onclick="yaratish()"> save</button>
+    <script>
+        function yaratish() {
+            let div = document.createElement('div')
+            div.innerHTML = document.getElementsByTagName("input")[0].value
+
+            let button = document.createElement("button")
+            button.innerHTML = "delet"
+            button.addEventListener("click", () => { div.remove() })
+            div.appendChild(button)
+            let body = document.getElementsByTagName("body")[0]
+            body.appendChild(div)
+
+            let show= document.createElement("button")
+
+        show.addEventListener("click", () => {
+            location.href = "22-dars.html"
+        })
+        div.appendChild(button)
+        div.appendChild(show)
+        body.appendChild(div)
+        }
+
+        
+
+    </script>
+</body>
+
+</html>
